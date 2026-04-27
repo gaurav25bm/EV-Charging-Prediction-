@@ -1,37 +1,40 @@
-⚡ Smart EV Charging Assistant
+# ⚡ Smart EV Charging Assistant
 
-🚀 [Click here to launch the Live Web App](https://8kfrqb6hehs5aglogefwkk.streamlit.app/)
+> **Status:** Live and Operational 🟢  
+> **[🚀 Click here to launch the Live Web App](https://8kfrqb6hehs5aglogefwkk.streamlit.app/)**
 
-A Machine Learning-powered application designed to help EV owners optimize their charging sessions by predicting energy needs, selecting the right equipment, and estimating costs.
+---
 
-📊 Dataset Overview
-The project utilizes an EV charging dataset featuring:
+### 📊 Project Overview
+This is a **Machine Learning-powered application** designed to help EV owners optimize their charging sessions. By analyzing vehicle and environmental data, the app predicts energy needs and suggests the most efficient equipment.
 
-Vehicle Specs: Battery capacity (kWh) and State of Charge (SOC).
+---
 
-Environmental Data: Temperature and time-based rate plans.
+### 🤖 Machine Learning Implementation
+I developed a robust multi-model pipeline to ensure high-accuracy results:
 
-Targets: Optimal charger classification and numerical energy requirements.
+* **Random Forest Classifier:** Predicts the **Optimal Charger Type** (Level 1, Level 2, or DC Fast Charging). It was selected for its ability to handle non-linear relationships.
+* **Random Forest Regressor:** Estimates the **Energy Required (kWh)**. This ensemble method provides stability by averaging multiple decision trees.
+* **Gradient Boosting (CatBoost):** Used for precision-tuning. It minimizes the error rate for complex energy and cost estimations.
 
-🤖 Machine Learning Implementation
-I developed a multi-model pipeline to handle both categorical and numerical predictions:
+---
 
-Random Forest Classifier: Predicts the Optimal Charger Type (Level 1, Level 2, or DC Fast Charging). It was chosen for its ability to handle non-linear relationships between battery size and charging speed.
+### 📊 Dataset Details
+The models were trained on a specialized EV dataset including:
+1. **Vehicle Specs:** Battery capacity and State of Charge (SOC).
+2. **Environment:** Outside temperature and daily rate plans.
+3. **Targets:** Optimal hardware selection and numerical energy requirements.
 
-Random Forest Regressor: Estimates the Energy Required (kWh). This model provides high stability by averaging multiple decision tree outputs to reduce variance.
+---
 
-Gradient Boosting (CatBoost): Used for precision-tuning the Cost and Energy estimates. Gradient boosting was particularly effective at minimizing the error rate for edge cases in the data.
+### 📈 Results & Performance
+* **Classification:** High precision in charger selection (no under-powering).
+* **Regression:** Low **Mean Absolute Error (MAE)**, ensuring reliable energy estimates.
+* **Inference:** Optimized to provide results in **under 1 second**.
 
-📈 Results & Key Metrics
-Accuracy: The Classifier handles charger selection with high precision, avoiding under-powering recommendations.
+---
 
-Low MAE: The Regressor achieved a low Mean Absolute Error, ensuring energy predictions stay within a reliable margin for real-world use.
-
-Performance: Optimized for deployment, providing instant results upon input.
-
-🛠️ Built With
-Python: Pandas, NumPy, Scikit-Learn, CatBoost
-
-Streamlit: Frontend Web Interface
-
-GitHub: Version Control & CI/CD Deployment
+### 🛠️ Built With
+* **Python** (Pandas, NumPy, Scikit-Learn, CatBoost)
+* **Streamlit** (UI/UX)
+* **GitHub** (Version Control & CI/CD)
