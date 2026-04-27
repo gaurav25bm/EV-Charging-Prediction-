@@ -12,4 +12,4 @@ A Machine Learning web application that predicts the optimal charger type, energ
 * **GitHub** (Version Control & Deployment)
 
 ### 📈 Live App
-[Click here to open the app!](INSERT_YOUR_LINK_HERE)
+[Click here to open the app!](https://8kfrqb6hehs5aglogefwkk.streamlit.app/)
